@@ -5,27 +5,49 @@ import { useEffect, useState } from 'react';
 
 const GetDataFromApi = () => {
   const [rawCallData, setRawCallData] = useState([]);
-  const [eachData, setEachData] = useState([]);
+  const [singleCall, setSingleCall] = useState([]);
   useEffect(() => {
 
     axios.get("https://aircall-job.herokuapp.com/activities")
 
      .then((response) => {
-      console.log('call data from api', response.data);
-
       setRawCallData(response.data);
-
      })
 
   }, []);
 
+  const getArchiveCall = (id) => {
+    const filterRawData = rawCallData.find((data) => data.id === id);
+    const setCallArchived = {
+      is_archived:true
+    }
+    if(filterRawData.is_archived === true){
+      setCallArchived.is_archived = false;
+    }
+    const updateCall = Object.assign(filterRawData, setCallArchived);
+    return axios.post(`https://aircall-job.herokuapp.com/activities/${filterRawData.id}`)
+      .then((res) => {
+        console.log("Call achived or unachived")
+        setRawCallData([...rawCallData, updateCall]);
+      })
+
+  }
+
+  const makeAllCallsArchived = () => {
+    const setCallArchived = {
+      is_archived:true,
+    }
+    const updateCall = Object.assign(rawCallData, {setCallArchived});
+    console.log('---->', updateCall)
+    setRawCallData([...rawCallData, updateCall]);
+    return rawCallData;
+  }
+
   
 
 
-
   return {
-    rawCallData,
-    eachData
+    rawCallData
   };
 }
 

@@ -67,6 +67,10 @@ header svg {
   padding: 0 1rem 0 1rem;
   text-decoration: none;
 }
+.navbarcss ul li:last-child a{
+  border-right: none!important;
+}
+
 .navbarcss ul li:hover{
   font-weight: 600;
   /* border-bottom: 1px solid red; */
@@ -83,8 +87,6 @@ header svg {
 .fa-sliders{
   transform: rotate( 
 90deg);
-    position: absolute;
-    left: 1.3rem;
-    top: -.8rem;
+   
     font-size: 1rem;
 }

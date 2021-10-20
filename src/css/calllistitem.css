@@ -23,6 +23,7 @@ width:68%;
   margin: 0;
   /* padding: 0 .5rem; */
   font-size: 0.7rem;
+  color: grey;
 }
 
 .call_dur, .call_dur p{
@@ -65,6 +66,32 @@ margin:0;
     font-weight: 600;
     letter-spacing: .05rem;
     color: #696767;
+}
+.calldetails{
+  position: relative;
+    border: 1px solid #ded8d9;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    background: white;
+}
+.call_time1{
+    /* position: absolute; */
+    /* top: -5%; */
+    /* right: 38%; */
+   
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    color: #696767;
+    /* border-top:1px solid red; */
+}
+.calldetails img{
+  width: 1.3rem;
+  height: 1.3rem;
+  padding-left: .5rem;
+  vertical-align: bottom;
 }
 
 .container-view{

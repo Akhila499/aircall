@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <div className="navbarcss">
         <Navbar />
-        <HeaderSideIcon />
+        
       </div>
     </header>
   );

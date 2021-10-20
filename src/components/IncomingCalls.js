@@ -1,5 +1,5 @@
 import React from 'react'
-import CallDetail from './CallDetail';
+
 import moment from 'moment';
 import GetDataFromApi from '../helpers/GetDataFromApi';
 import CallListItem from './CallListItem';

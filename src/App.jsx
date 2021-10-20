@@ -11,7 +11,8 @@ import ContactIcon from './components/ContactIcon.js';
 import SettingsIcon from './components/SettingsIcon.js';
 import CircleIcon from './components/CircleIcon.js';
 import IncomingCalls from './components/IncomingCalls.js';
-
+import ArchivedCalls from './components/ArchivedCalls.js';
+import CallDetails from './components/CallDetails.js';
 const App = () => {
 
 
@@ -37,6 +38,12 @@ const App = () => {
           </Switch>
           <Switch>
             <Route exact path='/incoming' component={IncomingCalls} />
+          </Switch>
+          <Switch>
+            <Route exact path='/archived' component={ArchivedCalls} />
+          </Switch>
+          <Switch>
+            <Route exact path='/:callId' component={CallDetails} />
           </Switch>
         </div>
         <Footer/>
