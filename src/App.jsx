@@ -43,7 +43,9 @@ const App = () => {
             <Route exact path='/archived' component={ArchivedCalls} />
           </Switch>
           <Switch>
-            <Route exact path='/:callId' component={CallDetails} />
+            <Route exact path='/:callId'>
+              <CallDetails/>
+            </Route>
           </Switch>
         </div>
         <Footer/>

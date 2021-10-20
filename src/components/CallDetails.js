@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
-import GetDataFromApi from '../helpers/GetDataFromApi';
+import React from 'react'
+
 import SingleCallData from '../helpers/SingleCallData';
+import {useParams} from "react-router-dom";
+
 const CallDetails = (props) => {
-  // const {data} = props;
-  const [call, setCall] = useState({})
-  const callId = props.match.params.callId;
+  const { callId } = useParams();
+  // const callId = props.match.params.callId;
   const { singleCall }= SingleCallData(callId);
   console.log('calldetails', singleCall)
   const formateDate = (dataString) => {
@@ -17,6 +17,7 @@ const CallDetails = (props) => {
   return (
     <div>
       
+      {singleCall.from && callId &&
       <div className='calldetails'>
         <div className="call_time1">
           {formateDate(singleCall.created_at)}
@@ -38,7 +39,7 @@ const CallDetails = (props) => {
           <p>Call Duration: {singleCall.duration}mins</p>
           <p>Type: {singleCall.direction}</p>
         </div>
-      </div>
+      </div>}
       
       
     </div>
