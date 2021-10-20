@@ -2,14 +2,16 @@ import React from 'react'
 import GetDataFromApi from '../helpers/GetDataFromApi';
 import CallListItem from './CallListItem';
 const ArchivedCalls = () => {
-  const { rawCallData, getArchiveCall, makeAllCallsArchived } = GetDataFromApi();
+  const { rawCallData } = GetDataFromApi();
   
   const archived = rawCallData.filter(archive => (
     archive.is_archived === true
   ))
-  const archivedList = archived.map(data =>     <CallListItem key={data.id} data={data} />
+  const archivedList = archived.map(data => (<CallListItem key={data.id} data={data} />)
     
     )
+
+  
 
   return (
 

@@ -40,11 +40,13 @@ const App = () => {
             <Route exact path='/incoming' component={IncomingCalls} />
           </Switch>
           <Switch>
-            <Route exact path='/archived' component={ArchivedCalls} />
-          </Switch>
-          <Switch>
             <Route exact path='/:callId'>
               <CallDetails/>
+            </Route>
+          </Switch>
+          <Switch>
+            <Route exact path='/archived'>
+              <ArchivedCalls/>
             </Route>
           </Switch>
         </div>

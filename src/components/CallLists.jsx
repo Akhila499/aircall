@@ -25,7 +25,7 @@ const CallLists = () => {
 
   return (
     <div>
-      <button type="submit" onClick={handleSubmit}>Archive all Calls</button>
+      {/* <button type="submit" onClick={handleSubmit}>Archive all Calls</button> */}
       
       {renderCalls} 
 

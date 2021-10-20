@@ -5,16 +5,17 @@ const SingleCallData = (id) => {
   const [singleCall, setSingleCall] = useState([]);
   useEffect(() => {
     
-      console.log(`@@@@ === https://aircall-job.herokuapp.com/activities/${id}` )
-      return axios.get(`https://aircall-job.herokuapp.com/activities/${id}`)
+       
+        axios.get(`https://aircall-job.herokuapp.com/activities/${id}`)
   
        .then((response) => {
         setSingleCall(response.data);
-        console.log('%%%%',response.data)
+        
        })
+       .catch((err)=>console.log('err',err))
        
 
-  }, [])
+  }, [id])
 
   return{
     singleCall

@@ -75,7 +75,7 @@ header svg {
   font-weight: 600;
   /* border-bottom: 1px solid red; */
 }
-.navbarcss ul li:hover{
+.navbarcss ul li:hover {
   border-bottom: 3px solid #e95454;
 }
 .noblock{
@@ -89,4 +89,10 @@ header svg {
 90deg);
    
     font-size: 1rem;
+}
+
+.active{
+  color:#2b2929;
+  font-weight: 600;
+  /* /* border-bottom: 1px solid red; */
 }

@@ -8,11 +8,14 @@ const GetDataFromApi = () => {
   const [singleCall, setSingleCall] = useState([]);
   useEffect(() => {
 
-    axios.get("https://aircall-job.herokuapp.com/activities")
-
+    axios.get("https://aircall-job.herokuapp.com/activities",
+    {headers: { "Content-Type": "application/json" }}
+    )
+      
      .then((response) => {
       setRawCallData(response.data);
      })
+     .catch((err)=>console.log('err',err))
 
   }, []);
 
@@ -30,24 +33,26 @@ const GetDataFromApi = () => {
         console.log("Call achived or unachived")
         setRawCallData([...rawCallData, updateCall]);
       })
+      .catch((err)=>console.log('error', err))
 
   }
 
-  const makeAllCallsArchived = () => {
-    const setCallArchived = {
-      is_archived:true,
-    }
-    const updateCall = Object.assign(rawCallData, {setCallArchived});
-    console.log('---->', updateCall)
-    setRawCallData([...rawCallData, updateCall]);
-    return rawCallData;
-  }
+  // const makeAllCallsArchived = () => {
+  //   const setCallArchived = {
+  //     is_archived:true,
+  //   }
+  //   const updateCall = Object.assign(rawCallData, {setCallArchived});
+  //   console.log('---->', updateCall)
+  //   setRawCallData([...rawCallData, updateCall]);
+  //   return rawCallData;
+  // }
 
   
 
 
   return {
-    rawCallData
+    rawCallData,
+    getArchiveCall
   };
 }
 
