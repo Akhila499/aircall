@@ -1,0 +1,39 @@
+.footer{
+  /* padding: 1rem 0; */
+  position:relative;
+}
+.footercall .fa-phone{
+  font-size:1.2rem;
+  padding: 1.2rem 0;
+  /* color: #7c7b7b; */
+}
+.footall{
+  display: inline-block;
+  width:20%;
+  text-align: -webkit-center;
+  color: #978f8f;
+  /* padding: 1.3rem 0; */
+}
+.fa-user, .fa-gear, .fa-circle-dot,.fa-ellipsis-h{
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+.fa-ellipsis-h{
+  background-color: #2ac41f;
+    padding: 1rem;
+    color: white;
+    border-radius: 2rem;
+    
+    position: absolute;
+    top: -1rem;
+    left: 43%;
+    border: 5px solid #ffffff;
+    box-shadow: 0px 0px 3px #978e8f;
+}
+
+.footercall:hover .fa-phone, .footall:hover .fa-user, .footall:hover .fa-gear, .footall:hover .fa-circle-dot{
+  color: #575555;
+  border-bottom: 4px solid #2ac41f;
+
+}
