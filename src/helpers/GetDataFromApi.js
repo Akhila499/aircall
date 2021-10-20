@@ -17,18 +17,9 @@ const GetDataFromApi = () => {
 
      })
 
-     
-    //  axios.get(`https://aircall-job.herokuapp.com/activities/${id}`)
-
-    //  .then((response) => {
-    //    setEachData(response.data);
-    //  })
-     
-
-
   }, []);
 
-
+  
 
 
 
