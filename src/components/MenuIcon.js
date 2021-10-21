@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const MenuIcon = () => {
   return (
@@ -6,7 +6,7 @@ const MenuIcon = () => {
       {/* <img src="https://img.icons8.com/material-outlined/24/000000/keypad.png"/> */}
       <i className="fas fa-ellipsis-h"></i>
     </div>
-  )
-}
+  );
+};
 
-export default MenuIcon
+export default MenuIcon;
